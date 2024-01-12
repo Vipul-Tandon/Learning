@@ -1,6 +1,7 @@
 # Creating hash
 ## =>
 grades = { "Jane Doe" => 10, "Jim Doe" => 6 }
+puts grades["Jim Doe"]
 ## :
 options = { font_size: 10, font_family: "Arial" }
 puts options[:font_size]
@@ -9,6 +10,7 @@ puts options[:font_size]
 # Comparing hash
 h1 = { "a" => 1, "c" => 2 }
 h2 = { 7 => 35, "c" => 2, "a" => 1 }
+puts h2[7]
 h3 = { "a" => 1, "c" => 2, 7 => 35 }
 h4 = { "a" => 1, "d" => 2, "f" => 35 }
 puts h1 == h2   #=> false
@@ -42,3 +44,19 @@ puts hh[1]
 # Searching
 ## searching a key from its value
 puts h.key(2)
+
+## searching if key exists
+puts h.key?("pencil")
+
+## .select method
+name_and_age = { "Bob" => 42, "Steve" => 31, "Joe" => 19}
+h8 = name_and_age.select {
+    |key,value| (key == "Bob") || (value == 19)
+}
+puts h8
+
+
+# Hash to Array
+array = name_and_age.to_a
+print array
+puts
