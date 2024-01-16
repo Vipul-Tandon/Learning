@@ -4,7 +4,7 @@ nested_array = [
   [9, [10, [11, 12], 13], 14],
   [15, 16, 17, [18, [19, 20]]]
 ]
-puts complicated_nested_array[0][2][2][1]                                    # 6
+puts nested_array[0][2][2][1]                                    # 6
 
 
 # Nested Hash
@@ -18,7 +18,7 @@ nested_hash = {
     "product2" => { name: "Phone", specs: { brand: "XYZ", memory: "64GB" } }
   }
 }
-puts complicated_nested_hash[:users]["user1"][:addresses][:work]            # 456 Business Ave
+puts nested_hash[:users]["user1"][:addresses][:work]            # 456 Business Ave
 
 
 
@@ -36,5 +36,5 @@ mixed_nested = [
   ]
 ]
 
-puts complicated_mixed_nested[0][:users][1][:address][:city]                # New York
-puts complicated_mixed_nested[1][1][:details][:nutrition][:vitamins][0]     # A
+puts mixed_nested[1][1][:details][:nutrition][:vitamins][0]     # A
+puts mixed_nested[0][:users][1][:address][:city]                # New York
