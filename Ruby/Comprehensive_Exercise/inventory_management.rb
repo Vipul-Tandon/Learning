@@ -2,6 +2,7 @@
 class InventoryItem
     attr_accessor(:name, :category, :quantity, :price)
 
+    # I made an array to store the instance as soon as it's created
     @@all_items = []
 
     def initialize(name, category, quantity, price)
